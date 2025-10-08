@@ -4,7 +4,6 @@ from langdetect import detect, LangDetectException, DetectorFactory
 from sklearn.model_selection import train_test_split
 import os
 
-# Set seed for reproducibility
 RANDOM_SEED = 4213
 
 def is_english(review):
@@ -17,7 +16,7 @@ def main():
     print("Starting data preprocessing...")
     
     # Load and clean the data
-    file_path = "train_small.ft.txt.bz2"  # Make sure this file is in your current directory
+    file_path = "train_small.ft.txt.bz2"  
     print("Loading data from compressed file...")
     
     data = []
@@ -69,7 +68,6 @@ def main():
     print(f"Validation set: {len(val_df)} reviews")
     print(f"Test set: {len(test_df)} reviews")
 
-    # Create directory structure
     os.makedirs('data/processed', exist_ok=True)
 
     # Save the splits
@@ -77,7 +75,6 @@ def main():
     val_df.to_csv('data/processed/validation.csv', index=False)
     test_df.to_csv('data/processed/test.csv', index=False)
 
-    print("\nData successfully saved!")
     print("Files created:")
     print("  - data/processed/train.csv")
     print("  - data/processed/validation.csv") 

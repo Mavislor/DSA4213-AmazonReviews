@@ -1,0 +1,70 @@
+# Data files (keep original large files local only)
+train.ft.txt.bz2
+*.bz2
+
+# Processed data (you can generate these yourself)
+data/processed/*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Model files (large)
+models/*.pkl
+models/*.model
+models/*.h5
+models/*.pt
+models/checkpoints/
+
+# Results 
+results/figures/*
+results/metrics/*

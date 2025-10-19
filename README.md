@@ -31,11 +31,8 @@ DSA4213 final project proposal (group 43)
   - logistic_regression_model.pkl
   - bert_model/            (folder for model & tokenizer)
 - results/
-  - figures/               # For plots, confusion matrices
-    - nb_confusion_matrix.png
-    - roberta_loss_curve.png
-  - metrics/               # For saved evaluation metrics
-    - baseline_metrics.csv
+  - metrics/               
+    - baseline_model_comparison.csv
     - llm_metrics.json
 - config/
   - baseline_config.yaml

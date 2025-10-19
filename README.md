@@ -14,10 +14,9 @@ DSA4213 final project proposal (group 43)
     - README.md            # Description of the data, source, and any cleaning steps
 - notebooks/
   - 01_data_exploration.ipynb
-  - 02_data_preprocessing.ipynb
-  - 03_baseline_models.ipynb      # NB & Logistic Regression
-  - 04_embeddings_experiments.ipynb # GloVe, etc.
-  - 05_llm_experiments.ipynb      # BERT, RoBERTa
+  - 02_baseline_models.ipynb      # NB & Logistic Regression
+  - 03_embeddings_experiments.ipynb # GloVe, etc.
+  - 04_llm_experiments.ipynb      # BERT, RoBERTa
 - src/                       
   - __init__.py            
   - data_preprocessing.py

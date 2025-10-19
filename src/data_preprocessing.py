@@ -13,11 +13,7 @@ def is_english(review):
         return False
 
 def main():
-    print("Starting data preprocessing...")
-    
-    # Load and clean the data
     file_path = "train_small.ft.txt.bz2"  
-    print("Loading data from compressed file...")
     
     data = []
     with bz2.open(file_path, "rt", encoding='utf-8') as f:

@@ -37,7 +37,6 @@ DSA4213 final project proposal (group 43)
 - config/
   - baseline_config.yaml
   - bert_config.yaml
-- environment.yml            # Conda environment file
 - requirements.txt           # Pip requirements file
 - README.md                  # Project overview, how to run the code
 - .gitignore

@@ -1,0 +1,94 @@
+---
+title: "GloVe_Amazon"
+author: "ChenXiangLe"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, warning=FALSE}
+library(text2vec)
+library(ggplot2)
+library(stringr)
+library(tidyverse)
+```
+
+```{r}
+df <- read.csv("train.csv")
+head(df)
+```
+
+
+```{r}
+clean_text <- function(text) {
+  text <- str_to_lower(text)
+  text <- str_replace_all(text, "[^a-z\\s]", "")
+  text <- str_squish(text)
+  text <- str_trim(text)
+  return(text)
+}
+
+df$cleaned_review <- sapply(df$review, clean_text)
+#head(df$cleaned_review)
+```
+
+
+```{r}
+positive_df <- df %>% filter(label == "positive")
+negative_df <- df %>% filter(label == "negative")
+print(nrow(df))
+print(nrow(positive_df))
+print(nrow(negative_df))
+positive_reviews <- as.vector(positive_df$cleaned_review[positive_df$cleaned_review != ""])
+negative_reviews <- as.vector(negative_df$cleaned_review[negative_df$cleaned_review != ""])
+```
+
+
+```{r}
+# Tokenize the sentences
+tokens <- word_tokenizer(c(positive_reviews, negative_reviews))
+
+# Create an iterator over the tokens
+it <- itoken(tokens, progressbar = FALSE)
+
+# Build the vocabulary
+vocab <- create_vocabulary(it)
+
+# Prune the vocabulary (optional: remove infrequent or frequent terms)
+vocab <- prune_vocabulary(vocab, term_count_min = 5)
+
+# Create a term-co-occurrence matrix (TCM)
+tcm <- create_tcm(it, vectorizer = vocab_vectorizer(vocab), skip_grams_window = 5)
+
+# Define the GloVe model
+glove <- GlobalVectors$new(rank = 50, x_max = 10)  # rank = embedding dimensions
+
+# Fit the GloVe model
+word_vectors <- glove$fit_transform(tcm, n_iter = 20, convergence_tol = 0.01)
+
+# Combine word and context embeddings (optional)
+word_vectors <- word_vectors + t(glove$components)
+
+# Retrieve embedding for a specific word
+word <- "love"
+word_embedding <- word_vectors[word, ]
+print(word_embedding)
+```
+
+```{r}
+# Perform PCA to reduce dimensions to 2D
+pca <- prcomp(word_vectors, center = TRUE, scale. = TRUE)
+word_vectors_pca <- data.frame(pca$x[, 1:2])
+word_vectors_pca$word <- rownames(word_vectors)
+
+# Plot the embeddings
+ggplot(word_vectors_pca, aes(x = PC1, y = PC2, label = word)) +
+  geom_point() +
+  geom_text(aes(label = word), hjust = 0, vjust = 1, size = 3) +
+  theme_minimal() +
+  labs(title = "Word Embeddings Visualization", x = "PC1", y = "PC2")
+```
+

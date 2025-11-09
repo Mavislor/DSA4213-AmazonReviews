@@ -23,9 +23,9 @@ For GitHub compatibility and faster experimentation, we're using a 50,000 review
   - Labels: `__label__1` = negative, `__label__2` = positive
 
 #### Processed Data
-- `data/processed/train.csv` - 14,000 reviews for training
-- `data/processed/validation.csv` - 3,000 reviews for validation
-- `data/processed/test.csv` - 3,000 reviews for testing
+- `data/processed/train.csv` - ~35,000 reviews for training
+- `data/processed/validation.csv` - ~7,500 reviews for validation
+- `data/processed/test.csv` - ~7,500 reviews for testing
 
 **CSV Format:**
 ```csv

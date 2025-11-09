@@ -7,7 +7,7 @@
 - **File**: `train.ft.txt.bz2` (632MB compressed)
 
 ### Our Sample
-For GitHub compatibility and faster experimentation, we're using a 20,000 review sample.
+For GitHub compatibility and faster experimentation, we're using a 50,000 review sample.
 
 **Sample Statistics:**
 - Total reviews: ~50,000

@@ -11,8 +11,8 @@ For GitHub compatibility and faster experimentation, we're using a 50,000 review
 
 **Sample Statistics:**
 - Total reviews: ~50,000
-- Positive reviews: 17,811 
-- Negative reviews: 17,133
+- Positive reviews: 25,000 
+- Negative reviews: 25,000
 - Language: English only
 
 ### File Structure

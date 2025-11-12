@@ -6,7 +6,8 @@ We used 4 BERT model variants in our project.
 
 The 4 models have been uploaded onto the HuggingFace platform and may be accessed using the model names stated above.
 An example code to access the models is:
-```python
+```
 model_name = "cxl1020/bert-for-Amazon-sentiment-analysis"
 model = AutoModelForSequenceClassification.from_pretrained(model_name)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
+```

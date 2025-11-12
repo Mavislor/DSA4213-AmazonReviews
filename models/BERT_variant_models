@@ -1,3 +1,5 @@
+### BERT models
+
 We used 4 BERT model variants in our project.
  - Original Pretrained BERT model ("cxl1020/bert-for-Amazon-sentiment-analysis")
  - Full finetuned BERT model ("cxl1020/full-finetuned-bert-for-Amazon-sentiment-analysis")

@@ -10,4 +10,3 @@ An example code to access the models is:
 model_name = "cxl1020/bert-for-Amazon-sentiment-analysis"
 model = AutoModelForSequenceClassification.from_pretrained(model_name)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
-```

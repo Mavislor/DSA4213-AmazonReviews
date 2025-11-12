@@ -1,4 +1,4 @@
-### BERT models
+## BERT models
 
 We used 4 BERT model variants in our project.
  - Original Pretrained BERT model ("cxl1020/bert-for-Amazon-sentiment-analysis")
@@ -7,7 +7,7 @@ We used 4 BERT model variants in our project.
  - Prompt finetuned BERT model ("cxl1020/prompt-finetuned-bert-for-Amazon-sentiment-analysis")
 
 The 4 models have been uploaded onto the HuggingFace platform and may be accessed using the model names stated above.
-An example code to access the models is:
+An example code snippet to access the models is:
 ```
 model_name = "cxl1020/bert-for-Amazon-sentiment-analysis"
 model = AutoModelForSequenceClassification.from_pretrained(model_name)

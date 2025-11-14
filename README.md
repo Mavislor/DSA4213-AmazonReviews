@@ -32,7 +32,7 @@ DSA4213 final project proposal (group 43)
   - BERT_variant_models.md      
 - results/               
   - baseline_model_comparison.csv
-  - llm_metrics.json
+  - ablation_results.csv
 - config/
   - baseline_config.yaml
   - bert_config.yaml

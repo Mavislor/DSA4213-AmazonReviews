@@ -29,7 +29,7 @@ DSA4213 final project proposal (group 43)
 - models/                    
   - naive_bayes_model.pkl
   - logistic_regression_model.pkl
-  - bert_model/            (folder for model & tokenizer)
+  - BERT_variant_models.md      
 - results/               
   - baseline_model_comparison.csv
   - llm_metrics.json

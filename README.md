@@ -15,8 +15,8 @@ DSA4213 final project proposal (group 43)
 - notebooks/
   - 01_data_exploration.ipynb
   - 02_baseline_models.ipynb      # NB & Logistic Regression
-  - 03_embeddings_experiments.ipynb # GloVe, etc.
-  - 04_llm_experiments.ipynb      # BERT, RoBERTa
+  - 03_llm_experiments/ 
+  - 04_ablation_studies.ipynb    
 - src/                       
   - __init__.py            
   - data_preprocessing.py

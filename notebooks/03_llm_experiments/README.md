@@ -7,4 +7,4 @@ This folder contains the finetuning code for the 4 variants of the BERT model an
 - `04_pretrained_BERT_Amazon.ipynb` contains the original BERT model as a baseline for comparison
 - `05_BERT_variant_evaluation.ipynb` contains the performance of the 4 BERT models quantitatively and qualitatively (error analysis & adversarial testing)
   
-Hyperparamter tuning for `learning_rate`, `batch_size` and `weight_decay` was performed on the fully finetuned BERT model. The best set of hyperparameters obtained for the fully finetuned BERT model were also used for the subsequent BERT models for consistency.
+Hyperparamter tuning for `learning_rate`, `batch_size` and `weight_decay` was performed on the fully finetuned BERT model. The best set of hyperparameters obtained for the fully finetuned BERT model was also used for the subsequent BERT models for consistency.

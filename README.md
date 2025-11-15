@@ -20,12 +20,8 @@ DSA4213 final project proposal (group 43)
 - src/                       
   - __init__.py            
   - data_preprocessing.py
-  - feature_engineering.py
   - baseline_models.py
-  - llm_models.py
-    - train.py
-    - evaluate.py
-    - utils.py
+  - BERT_models.py
 - models/                    
   - naive_bayes_model.pkl
   - logistic_regression_model.pkl

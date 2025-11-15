@@ -27,11 +27,10 @@ DSA4213 final project proposal (group 43)
   - logistic_regression_model.pkl
   - BERT_variant_models.md      
 - results/               
-  - baseline_model_comparison.csv
+  - models_results.csv
   - ablation_results.csv
 - config/
   - baseline_config.yaml
-  - bert_config.yaml
 - requirements.txt           # Pip requirements file
 - README.md                  # Project overview, how to run the code
 - .gitignore
